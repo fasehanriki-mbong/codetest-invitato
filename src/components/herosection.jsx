@@ -8,7 +8,7 @@ function HeroSection({ onOpenInvitation }) {
       display="flex"
       alignItems="center"
       justifyContent="center"
-bgImage="url('public/dekorasi3.jpg')"    
+bgImage="url('/dekorasi3.jpg')"    
 bgSize="cover"
 bgRepeat="no-repeat"
 bgPos="center">

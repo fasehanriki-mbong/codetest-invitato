@@ -10,7 +10,7 @@ function Footer() {
       justifyContent="center"
       bg="rgba(255,255,255,0.5)"
       textAlign="center"
-      bgImage="url('public/dekorasi2.jpg'"
+      bgImage="url('/dekorasi2.jpg'"
     >
       <VStack spacing={2} maxW="80%" mx="auto">
         <Text fontSize="md" color="gray.800">

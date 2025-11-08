@@ -8,7 +8,7 @@ function WelcomeSection() {
       display="flex"
       alignItems="center"
       justifyContent="center"
-      bgImage="url('public/dekorasi2.jpg')"
+      bgImage="url('/dekorasi2.jpg')"
       textAlign="center"
     >
       <VStack spacing={4} maxW="80%" mx="auto">
