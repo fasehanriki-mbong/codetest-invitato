@@ -18,7 +18,7 @@ function Footer() {
         </Text>
         <Text fontSize="sm" color="gray.600">
           Kami yang berbahagia, <br />
-          <b>Riki & Salsabila</b>
+          <b>Riki & Nilam</b>
         </Text>
       </VStack>
     </Box>
