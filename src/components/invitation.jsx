@@ -3,10 +3,14 @@ import { useState, useRef, useEffect } from "react";
 import HeroSection from "./herosection.jsx";
 import WelcomeSection from "./welcomesection.jsx";
 import Footer from "./footersection.jsx";
+import { motion } from "framer-motion";
+
 
 export default function Invitation() {
   const [started, setStarted] = useState(false);
   const audioRef = useRef(null);
+  const MotionVStack = motion(VStack);
+
 
   const handleStart = () => {
     setStarted(true);
@@ -31,15 +35,15 @@ export default function Invitation() {
       h="100vh"
       w="100vw"
       overflow="hidden"
-      direction={{ base: "column", md: "row" }} 
+      direction={{ base: "column", md: "row" }}
     >
       <Box
         flex="1"
-        bgImage="url('public/dekorasi.png')"
+        bgImage="url('/dekorasi.png')"
         bgSize="cover"
         bgPos="center"
         bgRepeat="no-repeat"
-        display={{ base: "none", md: "block" }} 
+        display={{ base: "none", md: "block" }}
       />
 
       <Box
@@ -47,7 +51,7 @@ export default function Invitation() {
         maxW={{ base: "100%", md: "40%" }}
         h="100vh"
         overflowY="auto"
-        bgImage="url('public/dekorasi2.jpg')"
+        bgImage="url('/dekorasi2.jpg')"
         bgSize="cover"
         bgPos="center"
         bgRepeat="no-repeat"
@@ -69,21 +73,23 @@ export default function Invitation() {
               mb={{ base: 12, md: 0 }}
               onClick={handleStart}
             >
-             Buka Undangan
+              Buka Undangan
             </Button>
           </Flex>
         ) : (
-          <VStack
+          <MotionVStack
             spacing={10}
             align="stretch"
             p={{ base: 4, md: 6 }}
-            animation="fadeInUp 0.8s ease-out"
+            initial={{ opacity: 0, y: 80 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, ease: "easeOut" }}
           >
-            <audio ref={audioRef} src="public/rabi2.mp3" preload="auto" />
+            <audio ref={audioRef} src="/rabi2.mp3" preload="auto" />
             <HeroSection />
             <WelcomeSection />
             <Footer />
-          </VStack>
+          </MotionVStack>
         )}
       </Box>
     </Flex>
